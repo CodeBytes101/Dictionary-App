@@ -46,7 +46,6 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     word_inserter(data)
-
     return render_template('index.html',data = data)
 
 
