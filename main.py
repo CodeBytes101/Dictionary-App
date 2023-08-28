@@ -38,7 +38,6 @@ def word_inserter(data):
         with open("dailyword.json",'w') as file:
             json.dump(daily_word,file)
             
-word_inserter(data)
 
 
 
@@ -46,6 +45,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
+    word_inserter(data)
+
     return render_template('index.html',data = data)
 
 
