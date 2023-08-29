@@ -4,30 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dictionary Website</title>
+    <title>Dictionary Search</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
     </style>
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
+        /* Add any custom styles here */
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
-        .custom-heading {
-            font-size: 56px !important;
-            font-family: "MongoDB Value Serif", monospace;
-        }
-
-        .shadow-box {
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        .header-cover {
+            background-image: url('/static//banner.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 75px;
         }
     </style>
 </head>
 
-<body class="bg-purple-100 flex flex-col min-h-screen">
-
-    <header class="bg-purple-700 text-white py-4">
+<body class="bg-purple-100">
+    <header class="header-cover">
         <div class="container mx-auto flex justify-between items-center">
             <a href="/" class="custom-heading font-semibold">Dictionary Website</a>
             <nav>
@@ -41,17 +42,15 @@
     </header>
 
     <main class="container mx-auto mt-8 text-center">
-        <h1 class="custom-heading mb-4">{ {{ word }} }</h1>
-        <div class="bg-purple-200 p-6 rounded-lg my-20 items-center  shadow-2xl ">
-            <p class="text-lg text-black-900 font-semibold italic mb-8 my-50">Definition: {{ definition }}</p>
-        </div>
-        <a href="/search"
-            class="inline-block bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-lg font-semibold tracking-wide">
-            Search Another</a>
-
+        <img src="profile-gif.gif" alt="Profile" class="profile-image mx-auto mb-4">
+        <h1 class="text-3xl font-semibold mb-2">About Me</h1>
+        <p class="text-lg text-blck font-semibold">
+            Hello, I am [Your Name]. I am passionate about [Your Interests].
+            [More about yourself...]
+        </p>
     </main>
 
-    <footer class="fixed bottom-0  bg-gray-900 text-white py-6 w-full ">
+    <footer class="fixed bottom-0 bg-gray-900 text-white py-6 w-full ">
         <div class="container mx-auto text-center">
             <p>&copy; 2023 Dictionary Website. All rights reserved.</p>
         </div>

@@ -25,7 +25,7 @@
 
     <header class="bg-purple-700 text-white py-4">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="custom-heading font-semibold">Dictionary Website</a>
+            <a href="/" class="custom-heading font-semibold">Dictionary Website</a>
             <nav>
                 <ul class="flex space-x-4">
                     <li><a href="#" class="hover:text-gray-300 cursor-pointer">Home</a></li>
@@ -38,8 +38,14 @@
 
     <main class="container mx-auto mt-8 text-center">
         <h1 class="custom-heading mb-4">Explore the Dictionary Experience</h1>
-        <p class="text-lg text-gray-700 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec elit
-            vel ex venenatis faucibus a at est.</p>
+        <h1>
+            <p class="text-lg font-semibold font-mono italic text-black mb-8">{ {{ quote }} }</p>
+        </h1>
+        <h3>
+            <p class="text-lg  italic text-gray-700 mb-8">
+                Meaning: {{meaning}}
+            </p>
+        </h3>
         <a href="/search"
             class="inline-block bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-lg font-semibold tracking-wide">
             Search a word</a>
@@ -50,8 +56,8 @@
             <h2 class="text-4xl font-extrabold mb-4">Word of the Day</h2>
             <p class="text-gray-700 mb-8">Expand your vocabulary with our daily featured word.</p>
             <div class="bg-white p-6 rounded-lg shadow-xl">
-                <h3 class="text-xl font-semibold mb-2">{ {{ data['word'].capitalize() }} }</h3>
-                <p class="text-gray-700">{{data['definition']}}</p>
+                <h3 class="text-4xl font-semibold mb-2">{ {{ data['word'].capitalize() }} }</h3>
+                <p class="text-gray-700 text-xl">{{data['definition']}}</p>
             </div>
         </div>
     </section>
