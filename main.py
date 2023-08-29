@@ -47,10 +47,6 @@ def word_inserter(data):
         with open("dailyword.json",'w') as file:
             json.dump(daily_word,file)
             
-<<<<<<< HEAD
-=======
-
->>>>>>> 354a3254847dd678c622322f177cf0ee014e1c11
 
 
 app = Flask(__name__)
@@ -58,12 +54,8 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     word_inserter(data)
-<<<<<<< HEAD
     quote,meaning = thought()
     return render_template('index.html',data = data,quote=quote,meaning=meaning)
-=======
-    return render_template('index.html',data = data)
->>>>>>> 354a3254847dd678c622322f177cf0ee014e1c11
 
 
 @app.route('/search',methods = ["GET","POST"])
