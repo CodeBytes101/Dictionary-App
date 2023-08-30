@@ -4,8 +4,6 @@ import json
 from flask import Flask,render_template,request
 import random
 
-with open("dailyword.json", "r") as file:
-    data = json.load(file)
 
 def thought():
     with open('quotes.json', 'r',encoding='utf-8') as json_file:
@@ -39,36 +37,36 @@ def get_word_of_the_day():
             definition = definition_element.get_text().strip()
             return word ,definition
 
-def word_inserter(data):
-    
-    word ,definition = get_word_of_the_day()
-    if data['word'] == '' or data['word'] != word:
-        daily_word = {"word":word,"definition":definition}
-        with open("dailyword.json",'w') as file:
-            json.dump(daily_word,file)
-            
 
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    word_inserter(data)
+    word,definition = get_word_of_the_day()
     quote,meaning = thought()
-    return render_template('index.html',data = data,quote=quote,meaning=meaning)
+    return render_template('index.html',word=word,definition = definition,quote=quote,meaning=meaning)
 
 
 @app.route('/search',methods = ["GET","POST"])
 def search_word():
     if request.method == 'POST':
         word = request.form.get('word')
-        definition = define(word)
-        if definition != None:
-            return render_template('result.html',word= word,definition = definition)
+        if word:
+            definition = define(word)
+            if definition != None:
+                return render_template('result.html',word= word,definition = definition)
+            else:
+                return render_template('error.html')
         else:
-            return render_template('error.html')
+            return render_template('search.html')
     else:
         return render_template('search.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 
 
 if __name__ == '__main__':

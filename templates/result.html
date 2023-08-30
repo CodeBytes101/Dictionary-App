@@ -32,16 +32,16 @@
             <a href="/" class="custom-heading font-semibold">Dictionary Website</a>
             <nav>
                 <ul class="flex space-x-4">
-                    <li><a href="#" class="hover:text-gray-300 cursor-pointer">Home</a></li>
-                    <li><a href="#" class="hover:text-gray-300 cursor-pointer">About</a></li>
-                    <li><a href="#" class="hover:text-gray-300 cursor-pointer">Contact</a></li>
+                    <li><a href="/" class="hover:text-gray-300 cursor-pointer text-2xl">Home</a></li>
+                    <li><a href="/about" class="hover:text-gray-300 cursor-pointer text-2xl">About</a></li>
+                    <li><a href="/contact" class="hover:text-gray-300 cursor-pointer text-2xl">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="container mx-auto mt-8 text-center">
-        <h1 class="custom-heading mb-4">{ {{ word }} }</h1>
+        <h1 class="custom-heading mb-4">{ {{ word.capitalize() }} }</h1>
         <div class="bg-purple-200 p-6 rounded-lg my-20 items-center  shadow-2xl ">
             <p class="text-lg text-black-900 font-semibold italic mb-8 my-50">Definition: {{ definition }}</p>
         </div>
@@ -53,7 +53,7 @@
 
     <footer class="fixed bottom-0  bg-gray-900 text-white py-6 w-full ">
         <div class="container mx-auto text-center">
-            <p>&copy; 2023 Dictionary Website. All rights reserved.</p>
+            <p>&copy; 2023 Coder. All rights reserved.</p>
         </div>
     </footer>
 </body>

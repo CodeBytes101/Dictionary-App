@@ -4,55 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dictionary Search</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-    </style>
-    <style>
-        /* Add any custom styles here */
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .header-cover {
-            background-image: url('/static//banner.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 75px;
-        }
-    </style>
+    <title>About Me</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 
-<body class="bg-purple-100">
-    <header class="header-cover">
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-purple-700 text-white py-8">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="/" class="custom-heading font-semibold">Dictionary Website</a>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#" class="hover:text-gray-300 cursor-pointer">Home</a></li>
-                    <li><a href="#" class="hover:text-gray-300 cursor-pointer">About</a></li>
-                    <li><a href="#" class="hover:text-gray-300 cursor-pointer">Contact</a></li>
-                </ul>
-            </nav>
+            <a href="/" class="text-white font-semibold text-5xl">EasyDefine</a>
+            <div class="flex space-x-4">
+                <a href="/" class="hover:text-purple-300 text-2xl">Home</a>
+                <a href="/about" class="hover:text-purple-300 text-2xl">About</a>
+                <a href="/contact" class="hover:text-purple-300 text-2xl">Contact</a>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <main class="container mx-auto mt-8 text-center">
-        <img src="profile-gif.gif" alt="Profile" class="profile-image mx-auto mb-4">
-        <h1 class="text-3xl font-semibold mb-2">About Me</h1>
-        <p class="text-lg text-blck font-semibold">
-            Hello, I am [Your Name]. I am passionate about [Your Interests].
-            [More about yourself...]
-        </p>
+    <!-- Main Content -->
+    <main class="container mx-auto mt-8 px-4">
+        <img src="/static/logo.gif" alt="Profile" class="w-32 h-32 rounded-full mx-auto mb-4">
+        <div class="shadow-2xl p-4">
+            <h1 class="text-3xl font-semibold mb-2">About Me</h1>
+            <p class="text-lg text-gray-600">
+                Hey there, I'm a just another Coder! 🚀 As someone who thrives on lines of code and
+                embraces the syntax like a warm hug, I am your friendly neighborhood
+                programmer. Passionate about coding, I create digital wonders that
+                turn caffeine into software.
+            </p>
+            <p class="text-lg text-gray-600 mt-4">
+                When my college is about to open, and boredom seeks shelter in every corner,
+                you'll find me tapping away at my keyboard, bringing ideas to life.
+                My hobbies include debugging my life, attending virtual coffee meetings,
+                and finding creative ways to make the world a better-coded place.
+            </p>
+            <p class="text-lg text-gray-600 mt-4">
+                In the grand scheme of things, I'm just a collection of bits and bytes
+                exploring the endless possibilities of the digital universe. Join me on
+                this journey as we transform algorithms into memories and coding errors
+                into epic stories!
+            </p>
+        </div>
     </main>
 
-    <footer class="fixed bottom-0 bg-gray-900 text-white py-6 w-full ">
+    <!-- Sticky Footer -->
+    <footer class="fixed bottom-0  bg-gray-900 text-white py-6 w-full">
         <div class="container mx-auto text-center">
-            <p>&copy; 2023 Dictionary Website. All rights reserved.</p>
+            <p>&copy; 2023 Coder. All rights reserved.</p>
         </div>
     </footer>
 </body>

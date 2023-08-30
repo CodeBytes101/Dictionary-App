@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dictionary Website</title>
+    <title>EasyDefine</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
@@ -25,19 +25,19 @@
 
     <header class="bg-purple-700 text-white py-4">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="/" class="custom-heading font-semibold">Dictionary Website</a>
+            <a href="/" class="custom-heading font-semibold">EasyDefine</a>
             <nav>
                 <ul class="flex space-x-4">
-                    <li><a href="#" class="hover:text-gray-300 cursor-pointer">Home</a></li>
-                    <li><a href="#" class="hover:text-gray-300 cursor-pointer">About</a></li>
-                    <li><a href="#" class="hover:text-gray-300 cursor-pointer">Contact</a></li>
+                    <li><a href="/" class="hover:text-gray-300 cursor-pointer text-2xl">Home</a></li>
+                    <li><a href="/about" class="hover:text-gray-300 cursor-pointer text-2xl">About</a></li>
+                    <li><a href="/contact" class="hover:text-gray-300 cursor-pointer text-2xl">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="container mx-auto mt-8 text-center">
-        <h1 class="custom-heading mb-4">Explore the Dictionary Experience</h1>
+        <h1 class="custom-heading mb-4">Linguistic Treasures Await: Delve into Definitions</h1>
         <h1>
             <p class="text-lg font-semibold font-mono italic text-black mb-8">{ {{ quote }} }</p>
         </h1>
@@ -56,15 +56,15 @@
             <h2 class="text-4xl font-extrabold mb-4">Word of the Day</h2>
             <p class="text-gray-700 mb-8">Expand your vocabulary with our daily featured word.</p>
             <div class="bg-white p-6 rounded-lg shadow-xl">
-                <h3 class="text-4xl font-semibold mb-2">{ {{ data['word'].capitalize() }} }</h3>
-                <p class="text-gray-700 text-xl">{{data['definition']}}</p>
+                <h3 class="text-4xl font-semibold mb-2">{ {{ word.capitalize() }} }</h3>
+                <p class="text-gray-700 text-xl italic">{{ definition }}</p>
             </div>
         </div>
     </section>
 
     <footer class="bg-gray-900 text-white py-6 mt-8">
         <div class="container mx-auto text-center">
-            <p>&copy; 2023 Dictionary Website. All rights reserved.</p>
+            <p>&copy; 2023 Coder. All rights reserved.</p>
         </div>
     </footer>
 
