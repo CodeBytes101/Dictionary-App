@@ -3,7 +3,11 @@ from bs4 import BeautifulSoup
 import json
 from flask import Flask,render_template,request
 import random
+from flask_mail import Mail,Message
 
+with open('config.json') as file:
+    data = json.load(file)
+    params = data['params']
 
 def thought():
     with open('quotes.json', 'r',encoding='utf-8') as json_file:
@@ -41,6 +45,15 @@ def get_word_of_the_day():
 
 app = Flask(__name__)
 
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_USERNAME'] = params['email']
+app.config['MAIL_PASSWORD'] = params['pass']
+app.config['MAIL_DEFAULT_SENDER'] = params['email']
+
+mail = Mail(app)
+
 @app.route('/')
 def home():
     word,definition = get_word_of_the_day()
@@ -67,7 +80,19 @@ def search_word():
 def about():
     return render_template('about.html')
 
-
+@app.route('/contact',methods = ['GET','POST'])
+def contact():
+    if request.method =='POST':
+        name = request.form.get('name')
+        email = request.form.get('email')
+        number = request.form.get('phone')
+        msg = request.form.get('message')
+        message = Message(subject=f'New Mail From {name.capitalize()}',recipients=[params['email']])
+        message.body = f'{msg}\n\nNumber:{number}\n\nEmail: {email}'
+        mail.send(message)
+        return render_template('contact.html')
+    else:    
+        return render_template('contact.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
