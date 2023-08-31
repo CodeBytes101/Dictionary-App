@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyDefine</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
     </style>
@@ -15,7 +15,7 @@
         }
 
         .custom-heading {
-            font-size: 56px !important;
+            font-size: 41px !important;
             font-family: "MongoDB Value Serif", monospace;
         }
     </style>
@@ -23,16 +23,19 @@
 
 <body class="bg-purple-100">
 
-    <header class="bg-purple-700 text-white py-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="/" class="custom-heading font-semibold">EasyDefine</a>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="/" class="hover:text-gray-300 cursor-pointer text-2xl">Home</a></li>
-                    <li><a href="/about" class="hover:text-gray-300 cursor-pointer text-2xl">About</a></li>
-                    <li><a href="/contact" class="hover:text-gray-300 cursor-pointer text-2xl">Contact</a></li>
-                </ul>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a href='/' class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+
+                <span class="ml-3 font-semibold text-purple-700 text-5xl">EasyDefine</span>
+            </a>
+            <nav
+                class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                <a href='/' class="mr-5 hover:text-gray-900 font-semibold ">Home</a>
+                <a href='/about' class="mr-5 hover:text-gray-900 font-semibold">About</a>
+                <a href='/contact' class="mr-5 hover:text-gray-900 font-semibold">Contact</a>
             </nav>
+
         </div>
     </header>
 
@@ -62,7 +65,7 @@
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-6 mt-8">
+    <footer class=" bottom-0  bg-gray-900 text-white py-6 w-full">
         <div class="container mx-auto text-center">
             <p>&copy; 2023 Coder. All rights reserved.</p>
         </div>

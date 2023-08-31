@@ -5,21 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 
 <body class="bg-gray-100">
-    <!-- Navbar -->
-    <nav class="bg-purple-700 text-white py-8">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="/" class="text-white font-semibold text-5xl">EasyDefine</a>
-            <div class="flex space-x-4">
-                <a href="/" class="hover:text-purple-300 text-2xl">Home</a>
-                <a href="/about" class="hover:text-purple-300 text-2xl">About</a>
-                <a href="/contact" class="hover:text-purple-300 text-2xl">Contact</a>
-            </div>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a href='/' class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+
+                <span class="ml-3 font-semibold text-purple-700 text-5xl">EasyDefine</span>
+            </a>
+            <nav
+                class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                <a href='/' class="mr-5 hover:text-gray-900 font-semibold ">Home</a>
+                <a href='/about' class="mr-5 hover:text-gray-900 font-semibold">About</a>
+                <a href='/contact' class="mr-5 hover:text-gray-900 font-semibold">Contact</a>
+            </nav>
+
         </div>
-    </nav>
+    </header>
 
     <!-- Main Content -->
     <main class="container mx-auto mt-8 px-4">
@@ -48,7 +52,7 @@
     </main>
 
     <!-- Sticky Footer -->
-    <footer class="fixed bottom-0  bg-gray-900 text-white py-6 w-full">
+    <footer class=" bottom-0  bg-gray-900 text-white py-6 w-full">
         <div class="container mx-auto text-center">
             <p>&copy; 2023 Coder. All rights reserved.</p>
         </div>
