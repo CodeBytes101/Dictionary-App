@@ -24,52 +24,55 @@
 <body class="bg-purple-100">
 
     <header class="text-gray-600 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a href='/' class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <div class="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row">
+            <a href='/' class="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0">
 
-                <span class="ml-3 font-semibold text-purple-700 text-5xl">JustDefine</span>
+                <span class="ml-3 text-5xl font-semibold text-purple-700">JustDefine</span>
             </a>
             <nav
-                class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-                <a href='/' class="mr-5 hover:text-gray-900 font-semibold ">Home</a>
-                <a href='/about' class="mr-5 hover:text-gray-900 font-semibold">About</a>
-                <a href='/contact' class="mr-5 hover:text-gray-900 font-semibold">Contact</a>
+                class="flex flex-wrap items-center justify-center text-base md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400">
+                <a href='/' class="mr-5 font-semibold hover:text-gray-900 ">Home</a>
+                <a href='/about' class="mr-5 font-semibold hover:text-gray-900">About</a>
+                <a href='/contact' class="mr-5 font-semibold hover:text-gray-900">Contact</a>
             </nav>
 
         </div>
     </header>
 
     <main class="container mx-auto mt-8 text-center">
-        <h1 class="custom-heading mb-4">Linguistic Treasures Await: Delve into Definitions</h1>
+        <h1 class="mb-4 custom-heading">Linguistic Treasures Await: Delve into Definitions</h1>
         <h1>
-            <p class="text-lg font-semibold font-mono italic text-black mb-8">{ {{ quote }} }</p>
+            <p class="mb-8 font-mono text-lg italic font-semibold text-black">{ {{ quote }} }</p>
         </h1>
         <h3>
-            <p class="text-lg  italic text-gray-700 mb-8">
+            <p class="mb-8 text-lg italic text-gray-700">
                 Meaning: {{meaning}}
             </p>
         </h3>
         <a href="/search"
-            class="inline-block bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-lg font-semibold tracking-wide">
+            class="inline-block px-6 py-3 font-semibold tracking-wide text-white bg-purple-600 rounded-lg hover:bg-purple-700">
             Search a word</a>
     </main>
 
-    <section class="bg-gray-200 py-12">
+    <section class="min-h-screen py-12 bg-rose-300 mt-28">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-extrabold mb-4">Word of the Day</h2>
-            <p class="text-gray-700 mb-8">Expand your vocabulary with our daily featured word.</p>
-            <div class="bg-white p-6 rounded-lg shadow-xl">
-                <h3 class="text-4xl font-semibold mb-2">{ {{ word.capitalize() }} }</h3>
-                <p class="text-gray-700 text-xl italic">{{ definition }}</p>
+            <h2 class="mb-4 text-4xl font-extrabold">Word of the Day</h2>
+            <p class="mb-8 text-gray-700">Expand your vocabulary with our daily featured word.</p>
+            <div class="p-6 bg-white rounded-lg shadow-xl">
+                <h3 class="mb-2 text-4xl font-semibold">{ {{ word.capitalize() }} }</h3>
+                <p class="text-xl italic text-gray-700">{{ definition }}</p>
             </div>
         </div>
     </section>
 
-    <footer class=" bottom-0  bg-gray-900 text-white py-6 w-full">
+
+    <footer class="bottom-0 w-full py-6 text-white bg-gray-900">
         <div class="container mx-auto text-center">
             <p>&copy; 2023 Coder. All rights reserved.</p>
         </div>
     </footer>
+    </div>
+
 
 </body>
 
