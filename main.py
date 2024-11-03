@@ -4,6 +4,7 @@ import json
 from flask import Flask, render_template, request
 import random
 from flask_mail import Mail, Message
+import os
 
 with open("config.json") as file:
     data = json.load(file)
@@ -104,4 +105,4 @@ def contact():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0")
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
